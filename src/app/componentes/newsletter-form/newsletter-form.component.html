@@ -1,0 +1,36 @@
+<section class="bg-violet-700 py-20 grid grid-cols-1 md:grid-cols-2 px-70 md:px-120">
+  <div class="px-20 ">
+    <h3 class="text-3xl text-white font-semibold ">
+      Fique por dentro das tendências
+    </h3>
+    <p class="pt-4 flex justify-center text-white pb-10 md:text-xl ">
+      Se você quer se conectar com seus clientes de um modo simples
+       e intuitivo, onde o cliente pode sanar todas as suas dúvidas
+        sem precisar necessariamente entrar em contato direto, e
+        mesmo assim ter o atendimento perfeito, um site é a solução
+         que você precisa!
+
+    </p>
+  </div>
+
+  <form [formGroup]="newsletterForm" class="px-20 pt-10 text-white">
+    <label for="name" class="block mb-1">Name</label>
+    <input id="name" formControlName="name" class=" border-b-2 w-full mb-4 focus:outline-none bg-transparent" />
+
+    <label for="email" class="block mb-1">Email</label>
+    <input id="email" formControlName="email" class=" border-b-2 w-full mb-4 focus:outline-none bg-transparent" />
+
+    <div class="pt-10 flex justify-center">
+      <btn-primary
+        (submit)="onSubmit()"
+        [disabled]="!newsletterForm.valid"
+        [loading]="loading()"
+        class="rounded-xl p-6 bg-white text-violet-700 font-bold"
+        btn-text="Se inscreva"
+      >
+      </btn-primary>
+    </div>
+</form>
+
+
+</section>
